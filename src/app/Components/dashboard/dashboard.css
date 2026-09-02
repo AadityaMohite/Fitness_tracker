@@ -1,0 +1,392 @@
+
+/* =====================================================
+   FITNESS STATS
+===================================================== */
+
+.stats-section {
+  width: 100%;
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+
+
+/* Six cards in one row on desktop */
+
+.stats-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 12px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   STAT CARD
+===================================================== */
+
+.stat-card {
+  height: 105px !important;
+
+  border-radius: 14px !important;
+
+  border: 1px solid #e3eee9 !important;
+
+  background: #ffffff !important;
+
+  box-shadow:
+    0 4px 15px rgba(21, 76, 57, 0.07) !important;
+
+  transition: all 0.25s ease;
+}
+
+
+/* Remove excessive card padding */
+
+::ng-deep .stat-card .ant-card-body {
+  height: 100%;
+
+  padding: 14px !important;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* Hover */
+
+.stat-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 9px 25px rgba(21, 76, 57, 0.12) !important;
+}
+
+
+/* =====================================================
+   STAT ICON
+===================================================== */
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  font-size: 21px;
+
+  background: #eaf8f1;
+}
+
+
+/* =====================================================
+   STAT INFORMATION
+===================================================== */
+
+.stat-info {
+  min-width: 0;
+}
+
+
+.stat-title {
+  color: #71827b;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  margin-bottom: 5px;
+
+  white-space: nowrap;
+}
+
+
+.stat-value {
+  color: #08764d;
+
+  font-size: 23px;
+
+  font-weight: 750;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+}
+
+
+.stat-value span {
+  color: #80918a;
+
+  font-size: 11px;
+
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   INDIVIDUAL STAT THEMES
+===================================================== */
+
+.calories-card .stat-icon {
+  background: #fff1e8;
+}
+
+.distance-card .stat-icon {
+  background: #e9f5ff;
+}
+
+.steps-card .stat-icon {
+  background: #f0edff;
+}
+
+.duration-card .stat-icon {
+  background: #fff8df;
+}
+
+.achieved-card .stat-icon {
+  background: #e8f8ef;
+}
+
+.pending-card .stat-icon {
+  background: #fff0f0;
+}
+
+
+/* =====================================================
+   CHART SECTION
+===================================================== */
+
+.charts-section {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 14px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CHART CARD
+===================================================== */
+
+.chart-card {
+  width: 100%;
+
+  height: 290px !important;
+
+  border-radius: 14px !important;
+
+  border: 1px solid #e3eee9 !important;
+
+  background: #ffffff !important;
+
+  box-shadow:
+    0 4px 15px rgba(21, 76, 57, 0.07) !important;
+
+  overflow: hidden;
+}
+
+
+/* Chart header */
+
+::ng-deep .chart-card .ant-card-head {
+  min-height: 46px !important;
+
+  padding: 0 16px !important;
+
+  border-bottom: 1px solid #edf3f0 !important;
+}
+
+
+::ng-deep .chart-card .ant-card-head-title {
+  padding: 13px 0 !important;
+
+  color: #18382c !important;
+
+  font-size: 14px !important;
+
+  font-weight: 700 !important;
+}
+
+
+/* Chart body */
+
+::ng-deep .chart-card .ant-card-body {
+  height: calc(100% - 46px);
+
+  padding: 10px 14px 14px !important;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CHART CONTAINER
+===================================================== */
+
+.chart-container {
+  position: relative;
+
+  width: 100%;
+
+  height: 220px;
+
+  min-width: 0;
+}
+
+
+/* Canvas */
+
+.chart-container canvas {
+  width: 100% !important;
+
+  height: 100% !important;
+
+  max-width: 100%;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .charts-section {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+
+  .stat-card {
+    height: 95px !important;
+  }
+
+
+  ::ng-deep .stat-card .ant-card-body {
+    padding: 11px !important;
+
+    gap: 9px;
+  }
+
+
+  .stat-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+  }
+
+
+  .stat-title {
+    font-size: 10px;
+  }
+
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+
+  .chart-card {
+    height: 270px !important;
+  }
+
+
+  .chart-container {
+    height: 205px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+
+  .stat-card {
+    height: 90px !important;
+  }
+
+
+  ::ng-deep .stat-card .ant-card-body {
+    padding: 9px !important;
+
+    gap: 7px;
+  }
+
+
+  .stat-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 16px;
+  }
+
+
+  .stat-title {
+    font-size: 9px;
+  }
+
+
+  .stat-value {
+    font-size: 18px;
+  }
+
+
+  .stat-value span {
+    font-size: 9px;
+  }
+
+}
+
