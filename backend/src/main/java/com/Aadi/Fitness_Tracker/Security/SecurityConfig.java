@@ -31,7 +31,7 @@ public class SecurityConfig {
     @Autowired
     private CustomUserDetailsService userDetailsService;
 
-    @Value("${app.cors.allowed-origins:http://localhost:4200}")
+    @Value("${app.cors.allowed-origins=https://fitness-tracker-lud1.vercel.app}")
     private String allowedOrigins;
 
     @Bean
