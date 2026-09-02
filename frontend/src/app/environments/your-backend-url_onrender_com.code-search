@@ -1,0 +1,9 @@
+# Query: your-backend-url.onrender.com
+# ContextLines: 1
+
+1 result - 1 file
+
+src\app\environments\environment.prod.ts:
+  3    // Replace with your deployed backend's public URL (no trailing slash)
+  4:   apiUrl: 'https://fitness-tracker-backend-z9d2.onrender.com',
+  5  };
