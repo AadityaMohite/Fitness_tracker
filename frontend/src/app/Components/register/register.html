@@ -1,0 +1,182 @@
+
+<div class="auth-wrapper">
+
+  <!-- Background Fitness Decorations -->
+  <div class="fitness-circle circle-1"></div>
+  <div class="fitness-circle circle-2"></div>
+
+  <div class="auth-content">
+
+    <!-- Left Fitness Section -->
+    <div class="fitness-intro">
+
+      <div class="brand-icon">💪</div>
+
+      <h1>Fitness<span>Tracker</span></h1>
+
+      <h2>Start Your Fitness Journey</h2>
+
+      <p>
+        Create your account, track your workouts and turn your fitness goals
+        into achievements.
+      </p>
+
+      <div class="fitness-features">
+
+        <div>
+          <span>🏋️</span>
+          <label>Track Workouts</label>
+        </div>
+
+        <div>
+          <span>🎯</span>
+          <label>Set Your Goals</label>
+        </div>
+
+        <div>
+          <span>📊</span>
+          <label>Monitor Progress</label>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Register Card -->
+    <nz-card class="auth-card">
+
+      <div class="login-header">
+
+        <div class="login-icon">💪</div>
+
+        <h2>Create Your Account</h2>
+
+        <p>Join us and start your fitness journey today.</p>
+
+      </div>
+
+
+      <form
+        nz-form
+        [formGroup]="registerForm"
+        (ngSubmit)="submitForm()">
+
+        <!-- Name -->
+        <nz-form-item>
+
+          <nz-form-control nzErrorTip="Please enter your name!">
+
+            <div class="input-wrapper">
+
+              <span class="input-icon">👤</span>
+
+              <input
+                type="text"
+                nz-input
+                formControlName="name"
+                placeholder="Full name">
+
+            </div>
+
+          </nz-form-control>
+
+        </nz-form-item>
+
+
+        <!-- Email -->
+        <nz-form-item>
+
+          <nz-form-control nzErrorTip="Please enter a valid email!">
+
+            <div class="input-wrapper">
+
+              <span class="input-icon">📧</span>
+
+              <input
+                type="email"
+                nz-input
+                formControlName="email"
+                placeholder="Email address">
+
+            </div>
+
+          </nz-form-control>
+
+        </nz-form-item>
+
+
+        <!-- Password -->
+        <nz-form-item>
+
+          <nz-form-control
+            nzErrorTip="Password must be at least 6 characters!">
+
+            <div class="input-wrapper">
+
+              <span class="input-icon">🔒</span>
+
+              <input
+                type="password"
+                nz-input
+                formControlName="password"
+                placeholder="Password">
+
+            </div>
+
+          </nz-form-control>
+
+        </nz-form-item>
+
+
+        <!-- Register Button -->
+        <button
+          nz-button
+          nzType="primary"
+          nzBlock
+          [nzLoading]="loading"
+          [disabled]="registerForm.invalid"
+          type="submit"
+          class="login-btn">
+
+          <span>Create Account</span>
+
+          <span class="arrow">→</span>
+
+        </button>
+
+      </form>
+
+
+      <!-- Divider -->
+      <div class="divider">
+        <span>OR</span>
+      </div>
+
+
+      <!-- Login Link -->
+      <div class="auth-switch">
+
+        Already have an account?
+
+        <a routerLink="/login">
+          Log In
+        </a>
+
+      </div>
+
+    </nz-card>
+
+  </div>
+
+
+  <!-- Bottom Quote -->
+  <div class="fitness-quote">
+
+    <span>🔥</span>
+
+    Your journey starts with one step.
+
+  </div>
+
+</div>

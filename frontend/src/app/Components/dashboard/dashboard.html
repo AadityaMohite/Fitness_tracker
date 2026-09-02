@@ -1,0 +1,140 @@
+
+<!-- =====================================================
+     FITNESS STATS
+===================================================== -->
+
+<div class="stats-section">
+
+  <div class="stats-grid">
+
+    <!-- Calories -->
+    <nz-card class="stat-card calories-card">
+      <div class="stat-icon">🔥</div>
+
+      <div class="stat-info">
+        <div class="stat-title">Calories Burned</div>
+
+        <div class="stat-value">
+          {{ statsData?.totalCaloriesburned || 0 }}
+          <span>cal</span>
+        </div>
+      </div>
+    </nz-card>
+
+
+    <!-- Distance -->
+    <nz-card class="stat-card distance-card">
+      <div class="stat-icon">🏃</div>
+
+      <div class="stat-info">
+        <div class="stat-title">Distance</div>
+
+        <div class="stat-value">
+          {{ statsData?.distance || 0 | number:'1.1-1' }}
+          <span>km</span>
+        </div>
+      </div>
+    </nz-card>
+
+
+    <!-- Steps -->
+    <nz-card class="stat-card steps-card">
+      <div class="stat-icon">👟</div>
+
+      <div class="stat-info">
+        <div class="stat-title">Steps</div>
+
+        <div class="stat-value">
+          {{ statsData?.steps || 0 }}
+        </div>
+      </div>
+    </nz-card>
+
+
+    <!-- Duration -->
+    <nz-card class="stat-card duration-card">
+      <div class="stat-icon">⏱️</div>
+
+      <div class="stat-info">
+        <div class="stat-title">Duration</div>
+
+        <div class="stat-value">
+          {{ statsData?.duration || 0 }}
+          <span>min</span>
+        </div>
+      </div>
+    </nz-card>
+
+
+    <!-- Achieved Goals -->
+    <nz-card class="stat-card achieved-card">
+      <div class="stat-icon">🎯</div>
+
+      <div class="stat-info">
+        <div class="stat-title">Achieved Goals</div>
+
+        <div class="stat-value">
+          {{ statsData?.achievedGoals || 0 }}
+        </div>
+      </div>
+    </nz-card>
+
+
+    <!-- Not Achieved Goals -->
+    <nz-card class="stat-card pending-card">
+      <div class="stat-icon">📌</div>
+
+      <div class="stat-info">
+        <div class="stat-title">Not Achieved</div>
+
+        <div class="stat-value">
+          {{ statsData?.notAchievedGoals || 0 }}
+        </div>
+      </div>
+    </nz-card>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FITNESS CHARTS
+===================================================== -->
+
+<div class="charts-section">
+
+  <!-- Workout Chart -->
+  <nz-card
+    class="chart-card"
+    nzTitle="🏋️ Recent Workouts">
+
+    <div class="chart-container">
+
+      <canvas
+        #workoutLineChart>
+      </canvas>
+
+    </div>
+
+  </nz-card>
+
+
+  <!-- Activity Chart -->
+  <nz-card
+    class="chart-card"
+    nzTitle="🏃 Recent Activities">
+
+    <div class="chart-container">
+
+      <canvas
+        #activityLineChart>
+      </canvas>
+
+    </div>
+
+  </nz-card>
+
+</div>
+```

@@ -1,0 +1,487 @@
+/* ================================
+   MAIN BACKGROUND
+================================ */
+@import '../../shared/auth.css';
+/* .auth-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.15), transparent 25%),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.12), transparent 25%),
+    linear-gradient(135deg, #071f17 0%, #0b6b45 45%, #12a36f 100%);
+
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   DECORATIVE CIRCLES
+================================ */
+
+/* .fitness-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+} */
+
+/* .circle-1 {
+  width: 420px;
+  height: 420px;
+  top: -180px;
+  left: -150px;
+}
+
+.circle-2 {
+  width: 500px;
+  height: 500px;
+  bottom: -260px;
+  right: -180px;
+} */
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+/* .auth-content {
+  width: 100%;
+  max-width: 1050px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+  position: relative;
+  z-index: 2;
+}
+ */
+
+/* ================================
+   LEFT FITNESS INTRO
+================================ */
+
+/* .fitness-intro {
+  flex: 1;
+  color: white;
+  max-width: 520px;
+}
+
+.brand-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 18px;
+
+  margin-bottom: 20px;
+
+  backdrop-filter: blur(10px);
+}
+
+.fitness-intro h1 {
+  margin: 0;
+
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.fitness-intro h1 span {
+  color: #a7f3d0;
+}
+
+.fitness-intro h2 {
+  margin: 12px 0 10px;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.fitness-intro p {
+  max-width: 470px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 16px;
+  line-height: 1.7;
+} */
+
+
+/* ================================
+   FITNESS FEATURES
+================================ */
+
+/* .fitness-features {
+  display: flex;
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.fitness-features div {
+  min-width: 125px;
+
+  padding: 14px 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s ease;
+}
+
+.fitness-features div:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.fitness-features span {
+  font-size: 24px;
+}
+
+.fitness-features label {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  text-align: center;
+} */
+
+
+/* ================================
+   LOGIN CARD
+================================ */
+
+/* .auth-card {
+  width: 390px;
+
+  flex-shrink: 0;
+
+  border: none !important;
+  border-radius: 24px !important;
+
+  background: rgba(255, 255, 255, 0.97) !important;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.25) !important;
+
+  padding: 10px;
+
+  overflow: hidden;
+} */
+
+
+/* Remove unnecessary card title styling */
+
+/* ::ng-deep .auth-card .ant-card-body {
+  padding: 28px !important;
+} */
+
+
+/* ================================
+   LOGIN HEADER
+================================ */
+
+/* .login-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  font-size: 30px;
+
+  background: #e8f8f1;
+
+  box-shadow: 0 8px 20px rgba(18, 163, 111, 0.12);
+}
+
+.login-header h2 {
+  margin: 0;
+
+  color: #13251e;
+
+  font-size: 27px;
+  font-weight: 750;
+}
+
+.login-header p {
+  margin: 7px 0 0;
+
+  color: #7b8b85;
+
+  font-size: 14px;
+} */
+
+
+/* ================================
+   FORM
+================================ */
+
+/* ::ng-deep .auth-card nz-form-item {
+  margin-bottom: 18px;
+} */
+
+
+/* ================================
+   INPUT
+================================ */
+
+/* .input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+
+  left: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 2;
+
+  font-size: 17px;
+}
+
+.input-wrapper input {
+  height: 48px !important;
+
+  padding-left: 45px !important;
+
+  border-radius: 12px !important;
+
+  border: 1px solid #dce8e3 !important;
+
+  background: #f8fbfa !important;
+
+  font-size: 14px;
+
+  transition: all 0.25s ease;
+}
+
+.input-wrapper input:hover {
+  border-color: #12a36f !important;
+}
+
+.input-wrapper input:focus {
+  border-color: #12a36f !important;
+
+  box-shadow:
+    0 0 0 3px rgba(18, 163, 111, 0.12) !important;
+
+  background: white !important;
+} */
+
+
+/* ================================
+   LOGIN BUTTON
+================================ */
+/* 
+.login-btn {
+  height: 50px !important;
+
+  margin-top: 5px;
+
+  border: none !important;
+
+  border-radius: 12px !important;
+
+  background: linear-gradient(
+    135deg,
+    #0b8f60,
+    #13b979
+  ) !important;
+
+  box-shadow:
+    0 8px 20px rgba(11, 143, 96, 0.25);
+
+  font-size: 15px;
+  font-weight: 650;
+
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover:not([disabled]) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(11, 143, 96, 0.35);
+}
+
+.login-btn:active:not([disabled]) {
+  transform: translateY(0);
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 18px;
+} */
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+/* .divider {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 25px 0 20px;
+
+  color: #a2afa9;
+
+  font-size: 11px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: #e7eeeb;
+}
+
+.divider span {
+  font-weight: 600;
+}
+
+
+/* ================================
+   REGISTER
+================================ */
+
+/* .auth-switch {
+  text-align: center;
+
+  color: #7a8983;
+
+  font-size: 13px;
+}
+
+.auth-switch a {
+  color: #0b9462;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  margin-left: 3px;
+
+  transition: 0.2s ease;
+} */
+
+/* .auth-switch a:hover {
+  color: #066c48;
+  text-decoration: underline;
+} */ 
+
+
+/* ================================
+   BOTTOM QUOTE
+================================ */
+
+/* .fitness-quote {
+  position: absolute;
+
+  bottom: 22px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+
+  letter-spacing: 0.3px;
+
+  z-index: 3;
+}
+
+.fitness-quote span {
+  margin-right: 5px;
+} */
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+/* @media (max-width: 850px) {
+
+  .auth-content {
+    justify-content: center;
+  }
+
+  .fitness-intro {
+    display: none;
+  }
+
+  .auth-card {
+    width: 400px;
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .auth-wrapper {
+    padding: 18px;
+  }
+
+  .auth-card {
+    width: 100%;
+    border-radius: 20px !important;
+  }
+
+  ::ng-deep .auth-card .ant-card-body {
+    padding: 22px !important;
+  }
+
+  .login-header h2 {
+    font-size: 24px;
+  }
+
+  .fitness-quote {
+    display: none;
+  }
+} */ 
