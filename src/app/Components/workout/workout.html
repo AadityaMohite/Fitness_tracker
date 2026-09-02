@@ -1,0 +1,262 @@
+
+<div class="workout-section">
+
+  <!-- ================= HEADING ================= -->
+  <div nz-row>
+    <div nz-col nzSpan="24">
+
+      <h1
+        nz-card-grid
+        [ngStyle]="gridStyle"
+        class="workout-heading">
+
+        🏋️ Workout
+
+      </h1>
+
+    </div>
+  </div>
+
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <div
+    nz-row
+    nzGutter="16"
+    class="workout-layout">
+
+
+    <!-- ================= LEFT : WORKOUT FORM ================= -->
+    <div
+      nz-col
+      [nzXs]="24"
+      [nzSm]="24"
+      [nzMd]="11"
+      [nzLg]="10"
+      [nzXl]="9"
+      class="form-column">
+
+      <nz-card
+        nzType="inner"
+        nzTitle="💪 Post New Workout"
+        class="fitness-card">
+
+        <form
+          nz-form
+          [formGroup]="workoutForm"
+          (ngSubmit)="submitForm()"
+          class="custom-form">
+
+
+          <!-- Calories Burned -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              🔥 Calories Burned
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please enter calories burned!">
+
+              <nz-input-group nzSuffix="kcal">
+
+                <input
+                  type="number"
+                  nz-input
+                  formControlName="caloriesburned"
+                  placeholder="e.g. 350"
+                  min="1">
+
+              </nz-input-group>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Workout Type -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              🏃 Workout Type
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please select a workout type!">
+
+              <nz-select
+                nzAllowClear
+                nzShowSearch
+                nzPlaceHolder="Select workout type"
+                formControlName="type"
+                class="full-width">
+
+                <nz-option
+                  *ngFor="let type of listofType"
+                  [nzLabel]="type"
+                  [nzValue]="type">
+                </nz-option>
+
+              </nz-select>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Duration -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              ⏱️ Duration
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please enter workout duration!">
+
+              <nz-input-group nzSuffix="minutes">
+
+                <input
+                  type="number"
+                  nz-input
+                  formControlName="duration"
+                  placeholder="e.g. 30"
+                  min="1"
+                  max="600">
+
+              </nz-input-group>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Workout Date -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              📅 Workout Date
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please select workout date!">
+
+              <nz-date-picker
+                nzFormat="dd/MM/yyyy"
+                nzPlaceHolder="Select workout date"
+                formControlName="date"
+                class="full-width-picker">
+              </nz-date-picker>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Buttons -->
+          <nz-form-item class="workout-buttons">
+
+            <button
+              nz-button
+              nzType="default"
+              type="button"
+              (click)="resetForm()"
+              class="reset-button">
+
+              Reset
+
+            </button>
+
+
+            <button
+              nz-button
+              nzType="primary"
+              [disabled]="workoutForm.invalid"
+              type="submit"
+              class="post-button">
+
+              🏋️ Post Workout
+
+            </button>
+
+          </nz-form-item>
+
+        </form>
+
+      </nz-card>
+
+    </div>
+
+
+    <!-- ================= RIGHT : PAST WORKOUTS ================= -->
+    <div
+      nz-col
+      [nzXs]="24"
+      [nzSm]="24"
+      [nzMd]="13"
+      [nzLg]="14"
+      [nzXl]="15"
+      class="history-column">
+
+
+      <nz-card
+        nzType="inner"
+        nzTitle="📋 Past Workouts"
+        class="fitness-card history-card">
+
+
+        <!-- Workout List -->
+        <div
+          class="workout-item"
+          *ngFor="let workout of workouts">
+
+          <div class="workout-info">
+
+            <div class="workout-detail">
+              <span>🔥 Calories</span>
+              <strong>{{workout.caloriesburned}} kcal</strong>
+            </div>
+
+            <div class="workout-detail">
+              <span>🏃 Type</span>
+              <strong>{{workout.type}}</strong>
+            </div>
+
+            <div class="workout-detail">
+              <span>⏱️ Duration</span>
+              <strong>{{workout.duration}} min</strong>
+            </div>
+
+            <div class="workout-detail">
+              <span>📅 Date</span>
+              <strong>{{workout.date | date}}</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- No Workouts -->
+        <div
+          *ngIf="workouts?.length === 0"
+          class="empty-workout">
+
+          <div class="empty-icon">
+            🏋️
+          </div>
+
+          <strong>No workouts found</strong>
+
+          <span>
+            Start your fitness journey by posting a workout.
+          </span>
+
+        </div>
+
+      </nz-card>
+
+    </div>
+
+  </div>
+
+</div>

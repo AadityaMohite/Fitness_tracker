@@ -1,0 +1,424 @@
+
+/* =====================================================
+   ACTIVITY SECTION
+===================================================== */
+
+.activity-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   ACTIVITY LAYOUT
+===================================================== */
+
+.activity-layout {
+  width: 100%;
+
+  margin: 0 !important;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   COMMON FITNESS CARD
+===================================================== */
+
+.fitness-card {
+  width: 100%;
+
+  border-radius: 14px !important;
+
+  border: 1px solid #e1ece7 !important;
+
+  background: #ffffff !important;
+
+  box-shadow:
+    0 5px 18px rgba(19, 75, 56, 0.07) !important;
+
+  overflow: hidden;
+}
+
+
+/* Card body */
+
+::ng-deep .fitness-card .ant-card-body {
+  padding: 18px !important;
+}
+
+
+/* Card header */
+
+::ng-deep .fitness-card .ant-card-head {
+  min-height: 48px !important;
+
+  padding: 0 18px !important;
+
+  border-bottom: 1px solid #edf3f0 !important;
+
+  background: #ffffff !important;
+}
+
+
+::ng-deep .fitness-card .ant-card-head-title {
+  padding: 14px 0 !important;
+
+  color: #18382c !important;
+
+  font-size: 15px !important;
+
+  font-weight: 700 !important;
+}
+
+
+/* =====================================================
+   ACTIVITY FORM
+===================================================== */
+
+.activity-form-col {
+  margin-bottom: 16px;
+}
+
+
+/* Form item */
+
+::ng-deep .activity-section .custom-form nz-form-item {
+  margin-bottom: 13px !important;
+}
+
+
+/* Labels */
+
+::ng-deep .activity-section .ant-form-item-label {
+  padding-bottom: 5px !important;
+}
+
+
+::ng-deep .activity-section .ant-form-item-label > label {
+  color: #38564b !important;
+
+  font-size: 12px !important;
+
+  font-weight: 650 !important;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+::ng-deep .activity-section .ant-input {
+  height: 40px !important;
+
+  border-radius: 9px !important;
+
+  border: 1px solid #dce8e3 !important;
+
+  background: #f9fcfb !important;
+}
+
+
+::ng-deep .activity-section .ant-input:hover {
+  border-color: #12a36f !important;
+}
+
+
+::ng-deep .activity-section .ant-input:focus {
+  border-color: #12a36f !important;
+
+  box-shadow:
+    0 0 0 3px rgba(18, 163, 111, 0.10) !important;
+}
+
+
+/* Input group */
+
+::ng-deep .activity-section .ant-input-group-wrapper {
+  width: 100%;
+}
+
+
+::ng-deep .activity-section .ant-input-group .ant-input {
+  height: 40px !important;
+}
+
+
+/* =====================================================
+   DATE PICKER
+===================================================== */
+
+.full-width-picker {
+  width: 100% !important;
+}
+
+
+::ng-deep .activity-section .ant-picker {
+  width: 100% !important;
+
+  height: 40px !important;
+
+  border-radius: 9px !important;
+
+  border: 1px solid #dce8e3 !important;
+
+  background: #f9fcfb !important;
+}
+
+
+::ng-deep .activity-section .ant-picker:hover {
+  border-color: #12a36f !important;
+}
+
+
+::ng-deep .activity-section .ant-picker-focused {
+  border-color: #12a36f !important;
+
+  box-shadow:
+    0 0 0 3px rgba(18, 163, 111, 0.10) !important;
+}
+
+
+/* =====================================================
+   ACTIVITY BUTTON
+===================================================== */
+
+.fitness-button {
+  height: 42px !important;
+
+  margin-top: 3px;
+
+  border: none !important;
+
+  border-radius: 9px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #08764d,
+      #13b979
+    ) !important;
+
+  font-weight: 650;
+
+  box-shadow:
+    0 6px 16px rgba(8, 118, 77, 0.20);
+
+  transition: all 0.25s ease;
+}
+
+
+.fitness-button:hover:not([disabled]) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 20px rgba(8, 118, 77, 0.28);
+}
+
+
+/* =====================================================
+   ACTIVITY HISTORY
+===================================================== */
+
+.activity-history {
+  min-height: 270px;
+}
+
+
+/* Activity item */
+
+.activity-item {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-bottom: 9px;
+
+  padding: 13px 14px;
+
+  border-radius: 10px;
+
+  background: #f7faf9;
+
+  border: 1px solid #e8f0ed;
+
+  transition: all 0.2s ease;
+}
+
+
+.activity-item:hover {
+  background: #eef8f3;
+
+  border-color: #cce9dc;
+
+  transform: translateX(2px);
+}
+
+
+/* =====================================================
+   ACTIVITY DATA
+===================================================== */
+
+.activity-item-main {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+
+.activity-data {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+
+.activity-label {
+  color: #81918b;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+.activity-data strong {
+  color: #08764d;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   EMPTY ACTIVITY
+===================================================== */
+
+.empty-activity {
+  text-align: center;
+
+  padding: 45px 15px;
+
+  color: #8a9993;
+
+  font-size: 14px;
+}
+
+
+.empty-icon {
+  font-size: 34px;
+
+  margin-bottom: 8px;
+}
+
+
+.empty-activity small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #a1ada8;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .activity-item-main {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+  .activity-section {
+    padding: 0;
+  }
+
+
+  .activity-item-main {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+
+  ::ng-deep .fitness-card .ant-card-body {
+    padding: 13px !important;
+  }
+
+
+  ::ng-deep .fitness-card .ant-card-head {
+    padding: 0 13px !important;
+  }
+
+
+  ::ng-deep .fitness-card .ant-card-head-title {
+    font-size: 14px !important;
+  }
+
+
+  .activity-data strong {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .activity-item-main {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+::ng-deep .activity-section .ant-input-group-wrapper {
+  width: 100%;
+}
+
+::ng-deep .activity-section .ant-input-group {
+  width: 100%;
+}
+
+::ng-deep .activity-section .ant-input-group .ant-input {
+  height: 40px !important;
+}
+
+::ng-deep .activity-section .ant-input-group-addon {
+  color: #08764d;
+  font-weight: 600;
+  background: #eaf8f1;
+  border-color: #dce8e3;
+}

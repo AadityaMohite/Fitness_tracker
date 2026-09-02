@@ -1,0 +1,157 @@
+
+/* Main Layout */
+.layout {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* Sidebar */
+.sidebar {
+  min-height: 100vh;
+  background: #111827;
+}
+
+/* User Profile */
+.logo {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Avatar */
+.avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+  padding: 5px;
+  margin-bottom: 12px;
+}
+
+/* User information */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: white;
+}
+
+.user-info strong {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user-info span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+
+/* Menu */
+:host ::ng-deep .ant-menu {
+  background: transparent;
+  border-right: none;
+}
+
+:host ::ng-deep .ant-menu-item {
+  margin: 8px 12px;
+  border-radius: 10px;
+  height: 48px;
+  line-height: 48px;
+  transition: all 0.3s ease;
+}
+
+:host ::ng-deep .ant-menu-item:hover {
+  background: #374151 !important;
+}
+
+:host ::ng-deep .ant-menu-item-selected {
+  background: #2563eb !important;
+}
+
+:host ::ng-deep .ant-menu-item .anticon {
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+
+/* Right Layout */
+.right-layout {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+
+/* Header */
+.top-header {
+  height: 70px;
+  padding: 0 30px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.header-user .anticon {
+  font-size: 20px;
+}
+
+
+/* Content */
+.content {
+  padding: 25px;
+  background: #f5f7fb;
+}
+
+
+/* Inner Content */
+.inner-content {
+  min-height: calc(100vh - 120px);
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .content {
+    padding: 15px;
+  }
+
+  .inner-content {
+    padding: 15px;
+  }
+
+  .top-header {
+    padding: 0 15px;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+}

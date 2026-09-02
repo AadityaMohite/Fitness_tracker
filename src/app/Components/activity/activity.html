@@ -1,0 +1,246 @@
+
+<!-- =====================================================
+     ACTIVITY SECTION
+===================================================== -->
+
+<div class="activity-section">
+
+  <!-- Heading -->
+  <h1
+    nz-card-grid
+    [ngStyle]="gridStyle"
+    class="section-heading">
+
+    🦾 Activity
+
+  </h1>
+
+
+  <!-- Main Content -->
+  <div
+    nz-row
+    [nzGutter]="16"
+    class="activity-layout">
+
+
+    <!-- =================================================
+         LEFT - ACTIVITY FORM
+    ================================================== -->
+
+    <div
+      nz-col
+      [nzXs]="24"
+      [nzMd]="9"
+      [nzLg]="8"
+      class="activity-form-col">
+
+      <nz-card
+        nzType="inner"
+        nzTitle="➕ Post New Activity"
+        class="fitness-card">
+
+        <form
+          nz-form
+          [formGroup]="activityForm"
+          class="custom-form"
+          (ngSubmit)="Submitform()">
+
+
+          <!-- Calories -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              🔥 Calories Burned
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please input the calories!">
+
+              <nz-input-group nzSuffix="kcal">
+
+                <input
+                  type="number"
+                  nz-input
+                  formControlName="caloriesburned"
+                  placeholder="Enter calories burned"
+                  min="1">
+
+              </nz-input-group>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Distance -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              🏃 Distance
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please input the distance!">
+
+              <nz-input-group nzSuffix="km">
+
+                <input
+                  type="number"
+                  nz-input
+                  formControlName="distance"
+                  placeholder="Enter distance"
+                  min="0">
+
+              </nz-input-group>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Steps -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              👟 Steps
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please input the steps!">
+
+              <input
+                type="number"
+                nz-input
+                formControlName="steps"
+                placeholder="Enter number of steps"
+                min="0">
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Date -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              📅 Activity Date
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please input the date!">
+
+              <nz-date-picker
+                formControlName="date"
+                nzFormat="dd/MM/yyyy"
+                nzPlaceHolder="Select activity date"
+                class="full-width-picker">
+              </nz-date-picker>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Submit -->
+          <button
+            nz-button
+            nzType="primary"
+            nzBlock
+            class="fitness-button"
+            [disabled]="activityForm.invalid"
+            type="submit">
+
+            Post Activity
+
+          </button>
+
+        </form>
+
+      </nz-card>
+
+    </div>
+
+
+    <!-- =================================================
+         RIGHT - PAST ACTIVITIES
+    ================================================== -->
+
+    <div
+      nz-col
+      [nzXs]="24"
+      [nzMd]="15"
+      [nzLg]="16">
+
+      <nz-card
+        nzType="inner"
+        nzTitle="📋 Past Activities"
+        class="fitness-card activity-history">
+
+
+        <!-- Activity List -->
+
+        <div
+          class="activity-item"
+          *ngFor="let activity of activities">
+
+          <div class="activity-item-main">
+
+            <div class="activity-data">
+              <span class="activity-label">🔥 Calories</span>
+              <strong>
+                {{ activity.caloriesburned }} kcal
+              </strong>
+            </div>
+
+            <div class="activity-data">
+              <span class="activity-label">🏃 Distance</span>
+              <strong>
+                {{ activity.distance }} km
+              </strong>
+            </div>
+
+            <div class="activity-data">
+              <span class="activity-label">👟 Steps</span>
+              <strong>
+                {{ activity.steps }}
+              </strong>
+            </div>
+
+            <div class="activity-data">
+              <span class="activity-label">📅 Date</span>
+              <strong>
+                {{ activity.date | date }}
+              </strong>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Empty State -->
+
+        <div
+          class="empty-activity"
+          *ngIf="activities?.length === 0">
+
+          <div class="empty-icon">🏃</div>
+
+          <div>No activities found</div>
+
+          <small>
+            Post your first activity to start tracking!
+          </small>
+
+        </div>
+
+
+      </nz-card>
+
+    </div>
+
+  </div>
+
+</div>
+
