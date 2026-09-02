@@ -1,0 +1,250 @@
+
+<div class="goal-section">
+
+  <!-- ================= HEADING ================= -->
+  <div nz-row>
+    <div nz-col nzSpan="24">
+
+      <h1
+        nz-card-grid
+        [ngStyle]="gridStyle"
+        class="goal-heading">
+
+        🎯 Goal
+
+      </h1>
+
+    </div>
+  </div>
+
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <div
+    nz-row
+    nzGutter="16"
+    class="goal-layout">
+
+
+    <!-- ================= LEFT : GOAL FORM ================= -->
+    <div
+      nz-col
+      [nzXs]="24"
+      [nzSm]="24"
+      [nzMd]="11"
+      [nzLg]="10"
+      [nzXl]="9"
+      class="goal-form-column">
+
+      <nz-card
+        nzType="inner"
+        nzTitle="🎯 Post New Goal"
+        class="fitness-card">
+
+        <form
+          nz-form
+          [formGroup]="goalForm"
+          class="custom-form"
+          (ngSubmit)="Submitform()">
+
+
+          <!-- Description -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              📝 Goal Description
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please input the goal description!">
+
+              <textarea
+                nz-input
+                placeholder="e.g. Run 5 km every day"
+                formControlName="description"
+                [nzAutosize]="{minRows:2,maxRows:6}">
+              </textarea>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Starting Date -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              📅 Starting Date
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please select the starting date!">
+
+              <nz-date-picker
+                nzPlaceHolder="Select starting date"
+                formControlName="starting_date"
+                class="full-width-picker">
+              </nz-date-picker>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Ending Date -->
+          <nz-form-item>
+
+            <nz-form-label [nzSpan]="24">
+              🏁 Ending Date
+            </nz-form-label>
+
+            <nz-form-control
+              nzErrorTip="Please select the ending date!">
+
+              <nz-date-picker
+                nzPlaceHolder="Select ending date"
+                formControlName="ending_date"
+                class="full-width-picker">
+              </nz-date-picker>
+
+            </nz-form-control>
+
+          </nz-form-item>
+
+
+          <!-- Submit Button -->
+          <button
+            nz-button
+            nzType="primary"
+            nzBlock
+            class="goal-button"
+            [disabled]="goalForm.invalid"
+            type="submit">
+
+            🎯 Post Goal
+
+          </button>
+
+        </form>
+
+      </nz-card>
+
+    </div>
+
+
+    <!-- ================= RIGHT : PAST GOALS ================= -->
+    <div
+      nz-col
+      [nzXs]="24"
+      [nzSm]="24"
+      [nzMd]="13"
+      [nzLg]="14"
+      [nzXl]="15"
+      class="goal-history-column">
+
+
+      <nz-card
+        nzType="inner"
+        nzTitle="📋 Past Goals"
+        class="fitness-card history-card">
+
+
+        <!-- Goal List -->
+        <div
+          class="goal-item"
+          *ngFor="let goal of goals">
+
+          <div class="goal-content">
+
+            <!-- Description -->
+            <div class="goal-detail goal-description">
+
+              <span>📝 Description</span>
+
+              <strong>
+                {{goal.description}}
+              </strong>
+
+            </div>
+
+
+            <!-- Starting Date -->
+            <div class="goal-detail">
+
+              <span>📅 Start Date</span>
+
+              <strong>
+                {{goal.starting_date | date}}
+              </strong>
+
+            </div>
+
+
+            <!-- Ending Date -->
+            <div class="goal-detail">
+
+              <span>🏁 End Date</span>
+
+              <strong>
+                {{goal.ending_date | date}}
+              </strong>
+
+            </div>
+
+
+            <!-- Status -->
+            <div class="goal-detail">
+
+              <span>📊 Status</span>
+
+              <strong
+                [class.goal-achieved]="goal.achieved"
+                [class.goal-pending]="!goal.achieved">
+
+                {{goal.achieved ? 'Achieved' : 'Not Achieved'}}
+
+              </strong>
+
+            </div>
+
+
+            <!-- Update Status -->
+            <span
+              *ngIf="!goal.achieved"
+              (click)="updateStatus(goal.id)"
+              nz-icon
+              nzType="check-circle"
+              nzTheme="twotone"
+              nzTwotoneColor="#52c41a"
+              class="goal-check">
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- No Goals -->
+        <div
+          *ngIf="goals?.length === 0"
+          class="empty-goal">
+
+          <div class="empty-goal-icon">
+            🎯
+          </div>
+
+          <strong>No goals found</strong>
+
+          <span>
+            Set your first fitness goal and start your journey.
+          </span>
+
+        </div>
+
+      </nz-card>
+
+    </div>
+
+  </div>
+
+</div>
+

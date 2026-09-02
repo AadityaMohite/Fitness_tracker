@@ -1,0 +1,461 @@
+
+/* ================================
+   MAIN GOAL SECTION
+================================ */
+
+.goal-section {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.goal-heading {
+  width: 100%;
+  margin: 0 0 16px 0;
+  padding: 11px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+  font-size: 22px;
+
+  color: #155b43;
+
+  background: linear-gradient(
+    135deg,
+    #f0faf6,
+    #e5f6ee
+  );
+
+  border: 1px solid #d4ebe0;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px rgba(21, 91, 67, 0.07);
+}
+
+
+/* ================================
+   LAYOUT
+================================ */
+
+.goal-layout {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.goal-form-column,
+.goal-history-column {
+  margin-bottom: 16px;
+}
+
+
+/* ================================
+   COMMON FITNESS CARD
+================================ */
+
+.fitness-card {
+  width: 100%;
+
+  border-radius: 14px !important;
+
+  border: 1px solid #dcebe4 !important;
+
+  background: #ffffff !important;
+
+  box-shadow:
+    0 5px 18px rgba(21, 91, 67, 0.08) !important;
+
+  overflow: hidden;
+}
+
+
+::ng-deep .fitness-card .ant-card-head {
+  min-height: 48px !important;
+
+  padding: 0 18px !important;
+
+  background: #fbfefd !important;
+
+  border-bottom: 1px solid #eaf1ee !important;
+}
+
+
+::ng-deep .fitness-card .ant-card-head-title {
+  padding: 14px 0 !important;
+
+  color: #174d3b !important;
+
+  font-size: 15px !important;
+
+  font-weight: 700 !important;
+}
+
+
+::ng-deep .fitness-card .ant-card-body {
+  padding: 18px !important;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+::ng-deep .custom-form .ant-form-item {
+  margin-bottom: 13px !important;
+}
+
+
+::ng-deep .custom-form .ant-form-item-label {
+  padding-bottom: 5px !important;
+}
+
+
+::ng-deep .custom-form .ant-form-item-label > label {
+  color: #3f5e52 !important;
+
+  font-size: 12px !important;
+
+  font-weight: 650 !important;
+}
+
+
+/* ================================
+   TEXTAREA
+================================ */
+
+::ng-deep .custom-form textarea.ant-input {
+  min-height: 40px;
+
+  border-radius: 8px !important;
+
+  border-color: #d7e6df !important;
+
+  background: #f9fcfb !important;
+
+  resize: vertical;
+}
+
+
+::ng-deep .custom-form textarea.ant-input:focus {
+  border-color: #35a879 !important;
+
+  box-shadow:
+    0 0 0 2px rgba(53, 168, 121, 0.10) !important;
+}
+
+
+/* ================================
+   DATE PICKER
+================================ */
+
+.full-width-picker {
+  width: 100% !important;
+}
+
+
+::ng-deep .custom-form .ant-picker {
+  width: 100% !important;
+
+  height: 40px !important;
+
+  border-radius: 8px !important;
+
+  border-color: #d7e6df !important;
+
+  background: #f9fcfb !important;
+}
+
+
+::ng-deep .custom-form .ant-picker:hover {
+  border-color: #35a879 !important;
+}
+
+
+/* ================================
+   GOAL BUTTON
+================================ */
+
+.goal-button {
+  height: 40px !important;
+
+  margin-top: 3px;
+
+  border: none !important;
+
+  border-radius: 8px !important;
+
+  background: linear-gradient(
+    135deg,
+    #08764d,
+    #16a974
+  ) !important;
+
+  font-weight: 650;
+
+  box-shadow:
+    0 5px 14px rgba(8, 118, 77, 0.18);
+
+  transition: all 0.2s ease;
+}
+
+
+.goal-button:hover:not([disabled]) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 17px rgba(8, 118, 77, 0.25);
+}
+
+
+/* ================================
+   GOAL HISTORY
+================================ */
+
+.history-card {
+  min-height: 260px;
+}
+
+
+/* ================================
+   GOAL ITEM
+================================ */
+
+.goal-item {
+  padding: 14px;
+
+  margin-bottom: 9px;
+
+  border: 1px solid #e2eee8;
+
+  border-radius: 10px;
+
+  background: #f8fbfa;
+
+  transition: all 0.2s ease;
+}
+
+
+.goal-item:hover {
+  background: #eef8f3;
+
+  border-color: #cbe6d9;
+
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   GOAL CONTENT
+================================ */
+
+.goal-content {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr 1fr auto;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* ================================
+   GOAL DETAILS
+================================ */
+
+.goal-detail {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+
+.goal-detail span {
+  color: #84948d;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+.goal-detail strong {
+  color: #08764d;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* Description */
+.goal-description strong {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* ================================
+   GOAL STATUS
+================================ */
+
+.goal-achieved {
+  color: #16a974 !important;
+}
+
+
+.goal-pending {
+  color: #d88900 !important;
+}
+
+
+/* ================================
+   CHECK ICON
+================================ */
+
+.goal-check {
+  cursor: pointer;
+
+  font-size: 21px;
+
+  transition: transform 0.2s ease;
+}
+
+
+.goal-check:hover {
+  transform: scale(1.15);
+}
+
+
+/* ================================
+   EMPTY GOALS
+================================ */
+
+.empty-goal {
+  min-height: 180px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #64766e;
+}
+
+
+.empty-goal-icon {
+  font-size: 34px;
+
+  margin-bottom: 8px;
+}
+
+
+.empty-goal strong {
+  color: #36584b;
+
+  font-size: 14px;
+}
+
+
+.empty-goal span {
+  margin-top: 5px;
+
+  color: #98a69f;
+
+  font-size: 11px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+  .goal-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .goal-description {
+    grid-column: span 2;
+  }
+
+  .goal-check {
+    justify-self: end;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 576px) {
+
+  .goal-section {
+    padding: 5px;
+  }
+
+  .goal-heading {
+    font-size: 19px;
+
+    padding: 9px;
+  }
+
+  ::ng-deep .fitness-card .ant-card-body {
+    padding: 14px !important;
+  }
+
+  ::ng-deep .fitness-card .ant-card-head {
+    padding: 0 14px !important;
+  }
+
+  .goal-content {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .goal-description {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+
+  .goal-content {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-description {
+    grid-column: span 1;
+  }
+
+}

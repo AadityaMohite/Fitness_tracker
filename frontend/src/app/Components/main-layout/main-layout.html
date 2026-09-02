@@ -1,0 +1,79 @@
+<nz-layout class="layout">
+
+  <!-- Sidebar -->
+  <nz-sider nzCollapsible nzWidth="250px" class="sidebar">
+
+    <div class="logo">
+
+      <img
+        src="https://img.icons8.com/?size=100&id=108652&format=png&color=000000"
+        alt="Avatar"
+        class="avatar"
+      />
+
+      <div class="user-info">
+        <strong>{{ currentUser?.name || 'Member' }}</strong>
+        <span>Fitness Member</span>
+      </div>
+
+    </div>
+
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+
+      <li nz-menu-item routerLink="/dashboard" routerLinkActive="ant-menu-item-selected">
+        <span nz-icon nzType="dashboard"></span>
+        <span>Dashboard</span>
+      </li>
+
+      <li nz-menu-item routerLink="/workout" routerLinkActive="ant-menu-item-selected">
+        <span nz-icon nzType="thunderbolt"></span>
+        <span>Workout</span>
+      </li>
+
+      <li nz-menu-item routerLink="/activity" routerLinkActive="ant-menu-item-selected">
+        <span nz-icon nzType="line-chart"></span>
+        <span>Activity</span>
+      </li>
+
+      <li nz-menu-item routerLink="/goal" routerLinkActive="ant-menu-item-selected">
+        <span nz-icon nzType="fund"></span>
+        <span>Goals</span>
+      </li>
+
+      <li nz-menu-item (click)="logout()">
+        <span nz-icon nzType="logout"></span>
+        <span>Logout</span>
+      </li>
+
+    </ul>
+
+  </nz-sider>
+
+
+  <!-- Right Content -->
+  <nz-layout class="right-layout">
+
+    <nz-header class="top-header">
+      <div class="header-title">
+        Fitness Dashboard
+      </div>
+
+      <div class="header-user">
+        <span nz-icon nzType="bell"></span>
+        <span>{{ currentUser?.name || 'Member' }}</span>
+      </div>
+    </nz-header>
+
+    <nz-content class="content">
+
+      <div class="inner-content">
+
+        <router-outlet></router-outlet>
+
+      </div>
+
+    </nz-content>
+
+  </nz-layout>
+
+</nz-layout>
