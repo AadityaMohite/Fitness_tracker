@@ -5,58 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c389c3c6-8212-4a8a-9c86-1e0434876943" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Controller/Activity_Restcontroller_Fitness.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Controller/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Controller/Goal_Restcontroller_fitness.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Controller/StatsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Controller/Workout_Restcontroller_fitness.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Dto/Activitydto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Dto/AuthResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Dto/GoalDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Dto/GraphDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Dto/LoginRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Dto/RegisterRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Dto/StatsDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Dto/WorkoutDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Entity/Activity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Entity/Goal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Entity/Workout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/FitnessTrackerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Repository/Activity_Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Repository/Goal_Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Repository/User_Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Repository/Workout_Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Security/AuthenticatedUserProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Security/CustomUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Security/JwtAuthFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Security/JwtUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Activity_Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Activity_ServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Auth_Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Auth_ServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Goal_Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Goal_ServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Stats_Serviceimpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Stats_service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Workout_Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Aadi/Fitness_Tracker/Service/Workout_ServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Aadi/Fitness_Tracker/FitnessTrackerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/Aadi/Fitness_Tracker/Security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/Aadi/Fitness_Tracker/Security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
