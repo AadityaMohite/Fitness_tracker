@@ -1,59 +1,99 @@
-# Fitnessweb
+# Fitness Tracker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
+A full-stack fitness tracking application with JWT-based authentication, workout logging, goal tracking, and activity stats — built with Angular and Spring Boot.
 
-## Development server
+## 🚀 Live Demo
 
-To start a local development server, run:
+- **Frontend:** [fitness-tracker-ludl.vercel.app](https://fitness-tracker-ludl.vercel.app)
+- **Backend API:** [fitness-tracker-backend-z9d2.onrender.com](https://fitness-tracker-backend-z9d2.onrender.com)
+
+> Note: the backend is on a free-tier host that spins down after inactivity — the first request after idle time can take 30–60s to respond while it cold-starts.
+
+## Features
+
+- User registration and login secured with Spring Security + JWT
+- Route guards and HTTP interceptors on the frontend to protect authenticated routes and attach tokens automatically
+- Workout logging and history
+- Goal setting and progress tracking
+- Activity and calorie tracking with dashboard stats
+- Role-based access patterns on the backend
+
+## Tech Stack
+
+**Frontend**
+- Angular 21
+- ng-zorro-antd (UI components)
+- Chart.js (data visualization)
+- RxJS
+
+**Backend**
+- Spring Boot 4.1 (Java 25)
+- Spring Security + JWT
+- Spring Data JPA / Hibernate
+- MySQL
+
+**Infrastructure**
+- Frontend hosted on Vercel
+- Backend containerized with Docker, hosted on Render
+- Database hosted on Clever Cloud (MySQL)
+
+## Architecture
+
+```
+Angular (Vercel) → Spring Boot REST API + JWT (Render, Docker) → MySQL (Clever Cloud)
+```
+
+Config values (DB credentials, JWT signing key, CORS origin) are injected via environment variables at deploy time — nothing sensitive is committed to the repo. The frontend uses Angular's environment files (`environment.ts` / `environment.prod.ts`) to point at the correct API URL depending on build target.
+
+## Project Structure
+
+```
+Fitness_tracker/
+├── backend/          # Spring Boot REST API
+│   ├── src/
+│   ├── pom.xml
+│   └── Dockerfile
+└── frontend/         # Angular application
+    ├── src/
+    ├── angular.json
+    └── package.json
+```
+
+## Local Development
+
+### Backend
 
 ```bash
+cd backend
+./mvnw spring-boot:run
+```
+
+Runs on `localhost:8080` by default. Requires a local MySQL instance — set `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` as environment variables, or edit the defaults in `src/main/resources/application.properties`.
+
+### Frontend
+
+```bash
+cd frontend
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Runs on `localhost:4200`. Points at `localhost:8080` for the API by default in dev mode.
 
-## Code scaffolding
+## Deployment
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Backend:** deployed via Docker on Render, root directory set to `backend`. Environment variables `DB_URL`, `DB_USERNAME`, `DB_PASSWORD`, `JWT_SECRET`, and `CORS_ALLOWED_ORIGINS` are set in the Render dashboard.
+- **Frontend:** deployed on Vercel, root directory set to `frontend`. `environment.prod.ts` is configured with the live backend URL before build.
+- **Database:** MySQL on Clever Cloud's free DEV plan. The connection pool (HikariCP) is capped at 3 connections to stay within the plan's 5-connection limit.
 
-```bash
-ng generate component component-name
-```
+## Known Trade-offs (Free-Tier Hosting)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+This project is deployed on free infrastructure for demonstration purposes:
+- Render's free web service spins down after inactivity, causing a cold-start delay on the first request.
+- Clever Cloud's DEV MySQL plan caps storage at 10MB and concurrent connections at 5 — sufficient for demo traffic, not production load.
 
-```bash
-ng generate --help
-```
+## Author
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Aaditya Mohite**
+- GitHub: [@AadityaMohite](https://github.com/AadityaMohite)
+- LinkedIn: [aaditya-mohite-10b6b228a](https://linkedin.com/in/aaditya-mohite-10b6b228a)
